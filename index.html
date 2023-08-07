@@ -1,149 +1,227 @@
 <!doctype html>
 <html>
-  <head>
-      <meta charset="utf-8">
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Scribbler - a codding landing page template for codrops</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
-      <link rel="stylesheet" href="scribbler-global.css">
-      <link rel="stylesheet" href="scribbler-landing.css">
-      <link rel="author" href="humans.txt">
-  </head>
-  <body>
-    <nav>
-      <div class="logo"></div>
-      <ul class="menu">
-        <div class="menu__item toggle"><span></span></div>
-        <li class="menu__item"><a href="doc.html" class="link link--dark"><i class="fa fa-book"></i> Documentation</a></li>
-        <li class="menu__item"><a href="" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
-      </ul>
-    </nav>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2009Scape Mobile - All of 2009Scape Anywhere!</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Oxygen:wght@300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/scribbler-landing.css">
+  <link rel="stylesheet" href="assets/css/scribbler-global.css">
+  <link rel="author" href="humans.txt">
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <div id="backgroundBlur"></div>
+  <nav>
+    <div class="logo"></div>
+    <ul class="menu">
+      <div class="menu__item toggle"><span></span></div>
+      <li class="menu__item"><a target="_new" href="https://github.com/2009scape/2009Scape-mobile"
+          class="link link--dark"><i class="fa-brands fa-github"></i> Github</a></li>
+    </ul>
+  </nav>
+  <div id="mainWrapper">
     <div class="hero">
-      <h1 class="hero__title">Scribbler</h1>
-      <p class="hero__description">Take your markdown notes in terminal</p>
+      <h1 class="hero__title">2009Scape Mobile</h1>
+      <p class="hero__description">All of 2009Scape Anywhere!</p>
     </div>
-    <div class="hero__terminal">
-      <pre>
-        <!-- Place your demo code here -->
-        <code class="shell-session demo">hyperyolo ~ $ </code>
-      </pre>
+    <div class="hero__terminal-wrapper">
+      <div class="hero__terminal">
+        <div class="carousel-slide" style="background-image: url('assets/img/screenshot1.png');"></div>
+        <div class="carousel-slide" style="background-image: url('assets/img/screenshot2.png');"></div>
+        <div class="carousel-slide" style="background-image: url('assets/img/screenshot3.png');"></div>
+      </div>
+      <div class="carousel-indicators">
+        <span class="carousel-dot active"></span>
+        <span class="carousel-dot"></span>
+        <span class="carousel-dot"></span>
+      </div>
     </div>
     <div class="wrapper">
       <div class="installation">
-        <h3 class="section__title">Installation</h3>
-        <div class="tab__container">
-          <ul class="tab__menu">
-            <li class="tab active" data-tab="mac">mac</li>
-            <li class="tab" data-tab="linux">linux</li>
-            <li class="tab" data-tab="win">win</li>
-          </ul>
-          <pre class="nohighlight code">
-            <code class="tab__pane active mac">$  brew install scribbler</code>
-            <code class="tab__pane linux">$  apt-get install scribbler</code>
-            <code class="tab__pane win">$  gem install scribbler</code>
-          </pre>
+        <div class="callout">
+          <p>Blending the iconic 2009Scape Mobile Launcher with PojavLauncher's innovation, we're proud to unveil the
+            revamped Mobile edition of the RT4 RuneScape Client. Transitioned gracefully from JOGL to LWJGL, immerse
+            yourself in 2009Scape's OpenGL HD visuals. A massive shoutout to the PojavLauncher team for their
+            instrumental role. And to our iOS devotees: Anticipate something special with iOS 17 Sideloading. The
+            future's looking bright!
+          </p>
+          <a target="_new" href="https://github.com/2009scape/2009Scape-mobile/releases"
+            class="button--primary">Download <i class="fa-brands fa-android" style="color:white"></i></a>
         </div>
+        <hr>
       </div>
       <div class="feature">
+        <h3 class="section__title"></h3>
         <div class="feature__item">
-          <h3 class="section__title">Fast & Light</h3>
-          <p>Start writing your notes immediately in any terminal! No more time wasted on navigating and opening your text editor.</p>
+          <h3 class="section__title">Plugin Powerhouse</h3>
+          <p>Stay compatible with all 2009Scape plugins! Start with the essentials and customize your plugin line-up for
+            an unmatched experience.
+          </p>
         </div>
         <div class="feature__item">
-          <h3 class="section__title">File Syncing</h3>
-          <p>Save your file in Dropbox then you can access to it from anywhere.</p>
+          <h3 class="section__title">HD or SD: Your Choice</h3>
+          <p>Unlock a revolutionary 2009Scape mobile experience with the integrated RT4 Client. Now, your game, your
+            graphics, your way!
+          </p>
         </div>
         <div class="feature__item">
-          <h3 class="section__title">Secure</h3>
-          <p>Encrypt your notes optionally. No one can get to your secrets! </p>
+          <h3 class="section__title">Touch or Click – You Pick!</h3>
+          <p>Toggle between intuitive touch controls and classic mouse pointers. Find your groove and game on!</p>
         </div>
         <div class="feature__item">
-          <h3 class="section__title">Configuration</h3>
-          <p>Maintain all your settings in a single <span class="code code--inline">config.json</span> file. Never need to redo the setting every single time jotting down a note.</p>
+          <h3 class="section__title">Scale to Your Style</h3>
+          <p>Boost battery life or enlarge touch targets on high DPI displays by adjusting the game's resolution. Ideal
+            for 1080p devices at 50-65% scaling.
+          </p>
         </div>
         <div class="feature__item">
-          <h3 class="section__title">Highlightings</h3>
-          <p>For better readability, scribbler has a clean, beautiful color scheme allow you to scan files fast.</p>
+          <h3 class="section__title">Custom Configs, No Limits</h3>
+          <p>Playing outside the official 2009Scape? Easily upload your config to play on your preferred server or even
+            test new ones on-the-move.
+          </p>
         </div>
         <div class="feature__item">
-          <h3 class="section__title">Keybindings</h3>
-          <p>You can expect common keybindings for scribbler. Customize <span class="code code--inline">bindings.json</span> for your own liking! </p>
+          <h3 class="section__title">Keyboard Harmony</h3>
+          <p>Every keyboard is the right keyboard. Ditch the restrictions and type with total freedom, no downloads
+            necessary!
+          </p>
         </div>
       </div>
       <div class="keybinding">
         <ul class="keybinding__detail">
-          <h3 class="keybinding__title">Default Keybindings</h3>
-          <li>Quit without saving <span class="keybinding__label">Ctrl+C</span></li>
-          <li>Save <span class="keybinding__label">Cmd+S</span></li>
-          <li>Save and Quit <span class="keybinding__label">Ctrl+D</span></li>
-          <li>Undo <span class="keybinding__label">Cmd+Z</span></li>
+          <h3 class="keybinding__title">Touch Controls</h3>
+          <li>Pan Camera <span class="keybinding__label">Swipe</span></li>
+          <li>Left Click <span class="keybinding__label">1-Finger Tap</span></li>
+          <li>Right Click <span class="keybinding__label">2-Finger Tap</span></li>
+          <li>Drag Click <span class="keybinding__label">Long Press</span></li>
         </ul>
         <ul class="keybinding__detail">
-          <h3 class="keybinding__title">Markdown Keybindings</h3>
-          <li><span class="keybinding__label">Ctrl+A</span> Insert Link Markdown</li>
-          <li><span class="keybinding__label">Ctrl+I</span> Insert Image Markdown</li>
-          <li><span class="keybinding__label">Ctrl+V</span> Insert YouTube Video</li>
-          <li><span class="keybinding__label">Ctrl+T</span> Insert Table</li>
+          <h3 class="keybinding__title">Mouse Controls</h3>
+          <li><span class="keybinding__label">Swipe</span> Mouse Mouse</li>
+          <li><span class="keybinding__label">1-Finger Tap</span> Left Click</li>
+          <li><span class="keybinding__label">2-Finger Tap</span> Right Click</li>
+          <li><span class="keybinding__label">Long Press</span> Drag Click</li>
         </ul>
-      </div>
-      <div class="callout">
-        <p>Read our documentation for advanced keybindings and customization</p>
-        <a href="doc.html" class="button--primary">Documentation</a>
       </div>
     </div>
     <div class="changelog">
       <div class="wrapper">
-        <h3 class="section__title">Changelog</h3>
+        <h3 class="section__title">Credits & Third party components and their licenses</h3>
+
         <div class="changelog__item">
           <div class="changelog__meta">
-            <h4 class="changelog__title">v0.7</h4>
-            <small class="changelog__date">10/12/2017</small>
-          </div>
-          <div class="changelog__detail">
-            <ul>
-              <li>Improving the writing workflow with better key bindings</li>
-              <li>Design updates</li>
-              <li>SSL Verification for web hooks</li>
-              <li>Render Emoji</li>
-            </ul>
+            <h4 class="changelog__title">Boardwalk (JVM Launcher)</h4>
+            <small class="changelog__date">License: Unknown License/Apache License 2.0 or GNU GPLv2</small>
           </div>
         </div>
+
         <div class="changelog__item">
           <div class="changelog__meta">
-            <h4 class="changelog__title">v0.6</h4>
-            <small class="changelog__date">7/30/2017</small>
-          </div>
-          <div class="changelog__detail">
-            <ul>
-              <li>Adding Unicode support</li>
-              <li>Basic text highlighting</li>
-              <li>Fresh Design</li>
-            </ul>
+            <h4 class="changelog__title">RT4 Client & Plugins</h4>
+            <small class="changelog__date">License: Proprietary & AGPL</small>
           </div>
         </div>
+
         <div class="changelog__item">
           <div class="changelog__meta">
-            <h4 class="changelog__title">v0.5</h4>
-            <small class="changelog__date">5/10/2017</small>
-          </div>
-          <div class="changelog__detail">
-            <ul>
-              <li>Save default md file in new folders</li>
-              <li>Ability to quick search on existing notes</li>
-            </ul>
+            <h4 class="changelog__title">Android Support Libraries</h4>
+            <small class="changelog__date">License: Apache License 2.0</small>
           </div>
         </div>
-        <div class="changelog__callout">
-          <a href="#" class="button--secondary">Checkout Full Log</a>
+
+        <div class="changelog__item">
+          <div class="changelog__meta">
+            <h4 class="changelog__title">GL4ES</h4>
+            <small class="changelog__date">License: MIT License</small>
+          </div>
+        </div>
+
+        <div class="changelog__item">
+          <div class="changelog__meta">
+            <h4 class="changelog__title">OpenJDK</h4>
+            <small class="changelog__date">License: GNU GPLv2 License</small>
+          </div>
+        </div>
+
+        <div class="changelog__item">
+          <div class="changelog__meta">
+            <h4 class="changelog__title">LWJGL3</h4>
+            <small class="changelog__date">License: BSD-3 License</small>
+          </div>
+        </div>
+
+        <div class="changelog__item">
+          <div class="changelog__meta">
+            <h4 class="changelog__title">Scribbler</h4>
+            <small class="changelog__date">License: MIT License</small>
+          </div>
         </div>
       </div>
     </div>
-    <footer class="footer">Scribbler is a free HTML template created exclusively for <a href="https://tympanus.net/codrops/" target="_blank" class="link link--light">Codrops</a>.</footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="scribbler.js"></script>
-  </body>
+  </div>
+  <footer class="footer"><a target="_new" href="https://2009scape.org/">2009Scape</a> is not affiliated with RuneScape
+    or Jagex Ltd. Website & Launcher by <a target="_new" href="https://twitter.com/downthecrop">@downthecrop</a>
+  </footer>
+  <script>
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    let activeIndex = 0;
+    setBodyBackgroundFromSlide(slides[activeIndex])
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        slides[activeIndex].style.opacity = 0; // hide the currently active slide
+        dots[activeIndex].classList.remove('active'); // remove active class from the current dot
+
+        slides[index].style.opacity = 1; // show the clicked slide
+        dot.classList.add('active'); // add active class to the clicked dot
+
+        activeIndex = index; // update the active index
+        setBodyBackgroundFromSlide(slides[activeIndex]);
+      });
+    });
+
+    setInterval(() => {
+      slides[activeIndex].style.opacity = 0;
+      dots[activeIndex].classList.remove('active');
+      activeIndex = (activeIndex + 1) % slides.length; // cycle to next slide, wrap to beginning if at end
+      slides[activeIndex].style.opacity = 1;
+      dots[activeIndex].classList.add('active');
+      // Set body background
+      setBodyBackgroundFromSlide(slides[activeIndex]);
+    }, 3000); // 3 seconds
+
+    function setBodyBackgroundFromSlide(slide) {
+      const imageUrl = getComputedStyle(slide).backgroundImage;
+      document.getElementById('backgroundBlur').style.backgroundImage = imageUrl;
+    }
+  </script>
+</body>
+
 </html>

@@ -1,23 +1,47 @@
 /* nav specialized to landing page */
 .logo {
-  background: url('logo.svg') no-repeat;
   background-size: contain;
   margin: 1rem 0 0 1rem;
 }
 
-nav {
-  background-color: var(--bg-color);
+#mainWrapper {
+  max-width: 1300px; /* or whatever width you prefer */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  backdrop-filter: blur(8px) brightness(0.5);
+  overflow-x: hidden;
+}
+
+#backgroundBlur {
+  position: fixed;
+  top: -10%;   /* extend beyond viewport */
+  right: -10%;
+  bottom: -10%;
+  left: -10%;
+  z-index: -1; 
+  max-height: 100%;
+
+  background-position: center 10%;  /* adjusts to crop the top part */
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(8px) brightness(0.4);
+  transition: background-image 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
 /* hero section */
 .hero {
   text-align: center;
-  background-color: var(--bg-color);
   padding: 2rem 0 10rem 0;
+  margin-bottom: 1rem;
 }
 
 .hero__title {
+  font-size: 3em;
   font-weight: 900;
+  font-family: rsfont;
   color: var(--primary-color);
 }
 
@@ -26,17 +50,76 @@ nav {
 }
 
 .hero__terminal {
-  width: 60%;
+  width: 95%;  /* 90% of the wrapper's width. This makes it slightly smaller than the phone frame, so you can see the edges of the phone. */
+  height: calc((50vw * .95) * 9 / 20);  /* Maintaining the 9:20 aspect ratio, based on 90% of the wrapper's width. */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;  /* This allows us to position the screenshot within the phone frame. */
+  top: 50%;  /* Start positioning from the center of the wrapper. */
+  left: 50%;  /* Also from the center of the wrapper. */
+  transform: translate(-50%, -50%) translate3d(0, 0, 0); 
+  color: white;
+  animation: fadeUp 1s;
+  border-radius: 4px;
+  box-shadow: 0px 12px 36.8px 9.2px rgba(0, 0, 0, 0.1);
+}
+
+
+.hero__terminal-wrapper {
+  width: 50vw; 
+  height: calc(50vw * 1 / 2.174);
   margin: -11rem auto 3rem auto;
+  background-image: url("../img/phoneframe.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   text-align: left;
+  position: relative;  /* This is key to allow child elements to be positioned absolutely in relation to this container */
   color: white;
   padding: 0 1rem;
   border-radius: 4px;
-  background-color: #232323;
-  min-height: 285px;
-  animation: fadeUp 2s;
   box-shadow: 0px 12px 36.8px 9.2px rgba(0, 0, 0, 0.1);
 }
+
+
+.carousel-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.carousel-slide:first-child {
+  opacity: 1; /* initially display the first slide */
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px; /* adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px; /* space between dots */
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background-color: white;
+}
+
 
 .hero__terminal pre {
   white-space: pre-line;
@@ -91,20 +174,22 @@ nav {
   position: absolute;
   right: 0.5rem;
   top: -2rem;
-  background-color: white;
+  background-color: var(--code-bg-color);
+  color: var(--white-color);
   padding: 0 0.5rem;
 }
 
 .keybinding__detail:last-child .keybinding__title {
+  color: var(--white-color);
   position: absolute;
   left: 0.5rem;
   top: -2rem;
-  background-color: white;
+  background-color: var(--code-bg-color);
   padding: 0 0.5rem;
 }
 
 .keybinding__label {
-  background: var(--white-color);
+  background: var(--code-bg-color);
   border: 1px solid var(--light-gray-color);
   box-shadow: 0 1px 0 0 var(--medium-gray-color);
   border-radius: 3px;
@@ -128,8 +213,10 @@ nav {
 
 /* changelog section */
 .changelog {
+  border-radius: 8px 8px 0px 0px;
   background-color: var(--bg-color);
   padding: 2rem 0;
+  box-shadow: 1px 8px 8px black;
 }
 
 .changelog__item {
@@ -156,9 +243,6 @@ nav {
 }
 
 @media (max-width: 750px) {
-  .hero__terminal {
-    width: 70%;
-  }
   .tab__container > ul {
     right: auto;
     left: 0;
